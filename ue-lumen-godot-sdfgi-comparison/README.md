@@ -43,19 +43,29 @@ The cast shadow from this stairway wall in Unreal is notably darker than the God
 
 ## **Overall Impressions**
 
-### Godot 4 SDFGI Pros:
+### **Godot 4 SDFGI:**
+
+Pros:
 * Seems to keep more natural/even lighting tones across the image.
 * Works especially well in corners and small detailed areas.
 * Does not create noise.
 * In comparison to non-raytraced Lumen specifically, the reflections are more detailed and give a better illusion of real reflections.
 
-### Godot 4 SDFGI Cons:
+Mids:
+* While the reflections are fairly detailed for a non-raytraced system, they really need to be used in combination with PBR textures that slightly blur/hide them as they do not look good as a pure mirror.
+
+Cons:
 * Transition between cascade resolutions can be visible and distracting when the camera is moving in some lighting scenarios (such as most of the image in shadow).
 
-### Unreal 5 Lumen Pros:
+### **Unreal 5 Lumen:**
+
+Pros:
 * The effect looks stable when the camera is in motion. If there is cascade resolution switching, I am not noticing it.
 
-### Unreal 5 Lumen Cons:
+Mids:
+* Non-raytraced Lumen reflections are not detailed, but at the same time they are temporally stable and not distracting. Their effect could be desirable or not depending on the game.
+
+Cons:
 * Many areas in shadow have noise that flickers and can be very distracting, especially when the camera is not moving.
 * It seems to freak out sometimes in areas with highly detailed geometry, especially in corners. Making it too dark or sometimes picking random bright color values that should not be there.
 
