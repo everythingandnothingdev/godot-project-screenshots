@@ -44,7 +44,7 @@ The cast shadow from this stairway wall in Unreal is notably darker than the God
 ## **Overall Impressions**
 
 ### Godot 4 SDFGI Pros:
-* Seems to keep a more natural/even lighting tones across the image.
+* Seems to keep more natural/even lighting tones across the image.
 * Works especially well in corners and small detailed areas.
 * Does not create noise.
 * In comparison to non-raytraced Lumen specifically, the reflections are more detailed and give a better illusion of real reflections.
