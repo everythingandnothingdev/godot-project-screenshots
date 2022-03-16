@@ -66,7 +66,7 @@ Mids:
 * Non-raytraced Lumen reflections are not detailed, but at the same time they are temporally stable and not distracting. Their effect could be desirable or not depending on the game.
 
 Cons:
-* Many areas in shadow have noise that flickers and can be very distracting, especially when the camera is not moving.
+* Many areas in shadow have noise that flickers and can be very distracting, especially noticable when the camera is not moving.
 * It seems to freak out sometimes in areas with highly detailed geometry, especially in corners. Making it too dark or sometimes picking random bright color values that should not be there.
 
 ## [THIS DOCUMENT IS A WORK IN PROGRESS]
