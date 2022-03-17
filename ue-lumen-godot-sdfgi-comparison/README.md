@@ -11,7 +11,7 @@ This table covers the settings in each engine, specifically what was changed fro
 | Category | Godot 4 | Unreal Engine 5 |
 | --: | :-- | :-- |
 | Resolution: | 1920x1080 | 1920x1080 |
-| Renderer: | Forward/Deferred Hybrid. | Deferred Renderer. (Has a Forward Renderer, but it did not work with dynamic shadows in testing. Also took forever to compile shaders. Seems to not be in the Unreal team's primary maintenance interests.) |
+| Renderer: | Clustered-Forward. | Deferred. (Has a Forward Renderer, but it did not work with dynamic shadows in testing. Also took forever to compile shaders. Seems to not be in the Unreal team's primary maintenance interests.) |
 | Tonemapper: | ACES. White Reference: 16. | ACES. Film Slope: 0.8. Saturation: 1.05. |
 | Exposure: | Default. Auto-Exposure: Off | Exposure Compensation: 1.8 ([matches Godot's default bias](https://github.com/godotengine/godot/pull/52476/files#diff-069b8591920e7f6caadc40359c68eda1af71f53cbe001e274929093297efde5aR175)). Min Brightness: 1. Max Brightness: 1. |
 | Global Illumination: | SDFGI: On. SSIL: Off. | Method: Lumen. Software Ray Tracing Mode: Detail Tracing. |
