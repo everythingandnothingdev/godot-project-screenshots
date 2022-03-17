@@ -52,7 +52,7 @@ Lumen has a tendency to create dark blotches in areas with complex geometry such
 
 ![Godot Left Unreal Right](./comparison1-occlusion-in-complex-geometry.png)
 
-The cast shadow from this stairway wall in Unreal is notably darker than the Godot counterpart. How accurate either is to photorealism is difficult to say. Though, having a much darker shadow than the wall that's casting the shadow looks unnatural to me. In Unreal, scaling the indirect lighting intensity up or down only slightly affects the cast shadow on the ground, while significantly brightening the wall.
+The cast shadow from this stairway wall on the ground in Unreal is notably darker than the Godot counterpart. This is due to a difference in how Unreal handles increasing the indirect light intensity vs Godot. This variable barely affects the brightness of the shadow on the ground in Unreal, while dramatically increases the brightness of the wall. Since you're throwing realism out of the window by increasing this variable, it is up in the air as to what is the "correct" response to it. But from an artistic standpoint, my goal in increasing the indirect lighting is to brighten up the shadows overall. Godot's implementation which keeps the lighting even across these shadows gives a more natural, photorealistic look.
 
 [Left: Godot 4, Right: Unreal Engine 5]
 
