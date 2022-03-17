@@ -52,7 +52,7 @@ Lumen has a tendency to create dark blotches in areas with complex geometry such
 
 ![Godot Left Unreal Right](./comparison1-occlusion-in-complex-geometry.png)
 
-The cast shadow from this stairway wall in Unreal is notably darker than the Godot counterpart. How accurate either is to photorealism is difficult to say. Though, having a much darker shadow than the wall that's casting the shadow looks unnatural to me. Scaling the indirect lighting intensity up or down only slightly affects the cast shadow on the ground, while significantly brightening the wall.
+The cast shadow from this stairway wall in Unreal is notably darker than the Godot counterpart. How accurate either is to photorealism is difficult to say. Though, having a much darker shadow than the wall that's casting the shadow looks unnatural to me. In Unreal, scaling the indirect lighting intensity up or down only slightly affects the cast shadow on the ground, while significantly brightening the wall.
 
 [Left: Godot 4, Right: Unreal Engine 5]
 
