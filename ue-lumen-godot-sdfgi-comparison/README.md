@@ -18,18 +18,12 @@ This table covers the settings in each engine, specifically what was changed fro
 | Reflections: | Source: Sky (and implicitly SDFGI) | Method: Lumen. |
 | Sky: | PanoramaSkyMaterial with .exr texture.grain | Sphere scaled to 20000 units with material using .exr texture, marked "Is Sky". SkyLight: Default. |
 | Anisotropic Filtering: | Level: 16x. | Unknown. |
-| Texture Streaming | N/A | Off. |
+| Texture Streaming: | N/A. | Off. |
 | Anti-Aliasing: | FXAA. | FXAA. |
 | Screen-Space Ambient Occlusion: | Off. | Intensity: 0. (Does not affect scene when Lumen is enabled, anyways.) |
 | Lens Flares: | N/A. | Intensity: 0. |
 | Bloom/Glow: | Off. | Intensity: 0. |
 | Film Grain: | N/A. | Intensity: 0. |
-
-* Both renders are tonemapped with ACES. How close the curves between the two engines is unknown, they were matched visually through exposure setting adjustments.
-* 
-* Ambient light is not enabled. Not even from the skybox.
-* 
-* Godot offers a screen space global illumination supplement called SSIL which can run in tandem with SDFGI. This was not enabled for the comparison.
 
 What I'll ask you to ignore in this comparison, as it's irrelevant:
 * **Texture/Normal Map Detail**: Yes, the Unreal screenshot's textures are missing a lot of detail, especially the textures at a distance. This is likely due to a difference in anisotropic filtering implementation. While Godot looks more detailed from a screenshot comparison, it also has more aliasing noise when moving around in game.
