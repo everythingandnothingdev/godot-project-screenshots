@@ -2,10 +2,33 @@
 
 I have attempted to set up the same scene in Godot 4 and Unreal 5 in order to compare their two global illumination systems: SDFGI and Lumen. Lumen is running the non-raytraced version, as Godot's SDFGI does not yet support ray tracing.
 
+This scene in comparison below has a single directional light pointing downwards at a slight angle. The indirect lighting intensity/energy for the directional light is increased 7x the direct lighting intensity, which significantly brightens the areas in shadow.
+
+## Engine Settings
+
+This table covers the settings in each engine, specifically what was changed from the defaults.
+
+| Category | Godot 4 | Unreal Engine 5 |
+| --: | :-- | :-- |
+| Resolution: | 1920x1080 | 1920x1080 |
+| Renderer: | Forward/Deferred Hybrid. | Deferred Renderer. (Has a Forward Renderer, but it did not work with dynamic shadows in testing. Also took forever to compile shaders. Seems to not be in the Unreal team's primary maintenance interests.) |
+| Tonemapper: | ACES. White Reference: 16. | ACES. Film Slope: 0.8. Saturation: 1.05. |
+| Exposure: | Default. Auto-Exposure: Off | Exposure Compensation: 1.8 ([matches Godot's default bias](https://github.com/godotengine/godot/pull/52476/files#diff-069b8591920e7f6caadc40359c68eda1af71f53cbe001e274929093297efde5aR175)). Min Brightness: 1. Max Brightness: 1. |
+| Global Illumination: | SDFGI: On. SSIL: Off. | Method: Lumen. Software Ray Tracing Mode: Detail Tracing. |
+| Reflections: | Source: Sky (and implicitly SDFGI) | Method: Lumen. |
+| Sky: | PanoramaSkyMaterial with .exr texture.grain | Sphere scaled to 20000 units with material using .exr texture, marked "Is Sky". SkyLight: Default. |
+| Anisotropic Filtering: | Level: 16x. | Unknown. |
+| Texture Streaming | N/A | Off. |
+| Anti-Aliasing: | FXAA. | FXAA. |
+| Screen-Space Ambient Occlusion: | Off. | Intensity: 0. (Does not affect scene when Lumen is enabled, anyways.) |
+| Lens Flares: | N/A. | Intensity: 0. |
+| Bloom/Glow: | Off. | Intensity: 0. |
+| Film Grain: | N/A. | Intensity: 0. |
+
 * Both renders are tonemapped with ACES. How close the curves between the two engines is unknown, they were matched visually through exposure setting adjustments.
-* This scene in comparison has a single directional light pointing downwards at a slight angle.
+* 
 * Ambient light is not enabled. Not even from the skybox.
-* The indirect lighting intensity/energy for the directional light is increased 7x the direct lighting intensity, which significantly brightens the areas in shadow.
+* 
 * Godot offers a screen space global illumination supplement called SSIL which can run in tandem with SDFGI. This was not enabled for the comparison.
 
 What I'll ask you to ignore in this comparison, as it's irrelevant:
