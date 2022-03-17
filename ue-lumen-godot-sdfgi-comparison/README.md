@@ -86,6 +86,20 @@ Cons:
 * Many areas in shadow have noise that flickers and can be very distracting, especially noticable when the camera is not moving.
 * It seems to freak out sometimes in areas with highly detailed geometry, especially in corners. Making it too dark or sometimes picking random bright color values that should not be there.
 
+## **Comparison to a Fully Raytraced Image**
+
+No skylight, indirect intensity/energy is 1 (default).
+
+Raytraced
+![Godot Screenshot 1](./raytraced6.png)
+
+Godot 4
+![Godot Screenshot 1](./godot6.png)
+
+Unreal 5
+![Unreal Screenshot 1](./unreal6.png)
+
+
 ## [THIS DOCUMENT IS A WORK IN PROGRESS]
 
 TODO: Light bleeding comparison  
